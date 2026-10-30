@@ -1,3 +1,4 @@
+
 notes = []
 
 def add_note():
@@ -12,8 +13,8 @@ def view_notes():
     if not notes:
         print("No notes available.")
     else:
-        for i, note in enumerate(notes, 1):
-            print(f"{i}. {note}")
+        for index, note in enumerate(notes, start=1):
+            print(f"Note {index}: {note}")
 
 def main():
     while True:
@@ -33,4 +34,5 @@ def main():
         else:
             print("Invalid choice!")
 
-main()
+if __name__ == "__main__":
+    main()
