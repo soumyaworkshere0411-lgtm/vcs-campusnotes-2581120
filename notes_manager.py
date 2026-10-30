@@ -1,7 +1,10 @@
 notes = []
 
 def add_note():
-    note = input("Enter your note: ")
+    note = input("Enter your note: ").strip()
+    if not note:
+        print("Note cannot be empty!")
+        return
     notes.append(note)
     print("Note added successfully!")
 
