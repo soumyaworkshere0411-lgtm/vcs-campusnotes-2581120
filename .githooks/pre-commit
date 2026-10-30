@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if git grep --cached -n -I -E 'TODO|FIXME' -- . ':(exclude).githooks/**'; then
+    echo "ERROR: Commit blocked! Remove all TODO/FIXME markers."
+    exit 1
+fi
+
+exit 0
